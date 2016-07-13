@@ -1,0 +1,33 @@
+[v-cloak] {
+  display: none; }
+
+body {
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 0; }
+
+.button-small {
+  padding: 0 10px; }
+
+.form-horizontal .control-label {
+  padding-top: 7px;
+  margin-bottom: 0;
+  text-align: right; }
+
+textarea {
+  height: 100%; }
+
+.panel-body .table {
+  margin-bottom: 0; }
+  .panel-body .table th {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: right;
+    border-top: none; }
+  .panel-body .table td {
+    padding-left: 15px;
+    border-top: none; }
+
+/*# sourceMappingURL=main.css.map */

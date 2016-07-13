@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <title>用户信息</title>
+
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../vendor/swiper/swiper-3.3.0.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+
+</head>
+<body id="personal_orderlist">
+<div class="container" v-cloak>
+  <br>
+
+  <div class="panel panel-warning">
+    <div class="panel-heading text-center">
+      当前预约
+    </div>
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" style="width: 60px;height: 60px;" src="../image/test.jpg" alt="">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">场馆1</h4>
+          约时间：2015-06-12 <br>
+          预约时长：2小时
+        </div>
+        <div class="media-right">
+          <a href="#" class="text-warning">
+            <i style="margin: 20px 5px;font-size: 20px" class="glyphicon glyphicon-chevron-right"></i>
+          </a>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading text-center">
+      已结束预约
+    </div>
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" style="width: 60px;height: 60px;" src="../image/test.jpg" alt="">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">场馆1</h4>
+          约时间：2015-06-12 <br>
+          预约时长：2小时
+        </div>
+        <div class="media-right">
+          <a href="#" class="text-warning">
+            <i style="margin: 20px 5px;font-size: 20px" class="glyphicon glyphicon-chevron-right"></i>
+          </a>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<script src="../vendor/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/swiper/swiper-3.3.0.min.js"></script>
+<script src="../vendor/vuejs/vue.js"></script>
+<script>
+  var personalDetail = new Vue({
+    el: '#personal_orderlist',
+    data: {
+      upload_image: ['../image/test.jpg']
+    },
+    methods: {
+      imgPreview: function (e) {
+        var reader = new FileReader();
+        reader.readAsDataURL(e.files[0]);
+        reader.onloadend = function () {
+          personalDetail.upload_image.push(reader.result);
+          personalDetail.$nextTick(function () {
+            personalSwiper.update();
+            personalSwiper.slideTo(personalSwiper.slides.length);
+          });
+        }
+      },
+      edit: function () {
+        $('.edit').removeClass('hidden');
+        $('.edit').siblings('span').addClass('hidden');
+        $('#edit_button').addClass('hidden');
+        $('#cancel_button').removeClass('hidden');
+      },
+      finishEdit: function () {
+        $('.edit').addClass('hidden');
+        $('.edit').siblings('span').removeClass('hidden');
+        $('#edit_button').removeClass('hidden');
+        $('#cancel_button').addClass('hidden');
+      },
+      cancelEdit: function () {
+        $('.edit').addClass('hidden');
+        $('.edit').siblings('span').removeClass('hidden');
+        $('#edit_button').removeClass('hidden');
+        $('#cancel_button').addClass('hidden');
+      }
+    }
+  });
+
+  var personalSwiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    slidesPerView: 1,
+    spaceBetween: 5
+  });
+
+
+</script>
+</body>
+</html>
