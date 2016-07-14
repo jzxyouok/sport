@@ -20,7 +20,8 @@
 
           <p>
             <a id="edit_button" class="media-object" @click="edit()"><i class="glyphicon glyphicon-edit"></i></a>
-            <a id="cancel_button" class="media-object hidden" @click="cancelEdit()"><i class="glyphicon glyphicon-remove"></i></a>
+            <a id="cancel_button" class="media-object hidden" @click="cancelEdit()"><i
+              class="glyphicon glyphicon-remove"></i></a>
           </p>
         </div>
       </div>
@@ -30,13 +31,13 @@
         <h4>照片展示</h4>
 
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class="img-responsive" src="/image/test.jpg" alt="">
+          <div v-for="image in image_url" class="swiper-slide">
+            <img class="img-responsive" :src="image" alt="">
             <button class="btn btn-warning btn-block hidden edit">删除这张图片</button>
           </div>
           <div v-for="image in upload_image" class="swiper-slide">
             <img class="img-responsive" :src="image" alt="">
-            <button class="btn btn-warning btn-block hidden edit">删除这张图片</button>
+            <button class="btn btn-warning btn-block edit">删除这张图片</button>
           </div>
         </div>
 
@@ -63,7 +64,9 @@
       <div>
         <h4>价格设置</h4>
 
-        <p>￥<span>20</span><input class="form-control input-sm hidden edit" type="text" style="width: 8em; display: inline;">/小时</p>
+        <p>￥<span>20</span><input class="form-control input-sm hidden edit" type="text"
+                                  style="width: 8em; display: inline;">/小时
+        </p>
 
       </div>
 
@@ -75,37 +78,76 @@
 
 
 @section('js')
+  <script src="{{asset('/')}}vendor/tencent_cloud_sdk/sdk/qcloud_sdk.js"></script>
+  <script src="{{asset('/')}}vendor/tencent_cloud_sdk/sdk/swfobject.js"></script>
   <script>
     var personalInformation = new Vue({
       el: '#personal_information',
       data: {
-        upload_image: ['../image/test.jpg']
+        image_url:['/image/test.jpg','/image/test1.jpg'],
+        upload_image: []
       },
       methods: {
         imgPreview: function (e) {
           var reader = new FileReader();
           reader.readAsDataURL(e.files[0]);
           reader.onloadend = function () {
-            personalDetail.upload_image.push(reader.result);
-            personalDetail.$nextTick(function () {
+            personalInformation.upload_image.push(reader.result);
+            personalInformation.$nextTick(function () {
               personalSwiper.update();
               personalSwiper.slideTo(personalSwiper.slides.length);
             });
           }
         },
-        edit: function(){
+        edit: function () {
           $('.edit').removeClass('hidden');
           $('.edit').siblings('span').addClass('hidden');
           $('#edit_button').addClass('hidden');
           $('#cancel_button').removeClass('hidden');
         },
-        finishEdit: function(){
+        finishEdit: function () {
+
+          var bucketName = "sport";
+
+          var cos = new CosCloud("10052000", "/vendor/tencent_cloud_sdk/Sign.php");
+
+          var successCallBack = function (result) {
+            console.log('成功!');
+            result = JSON.parse(result);
+            personalInformation.image_url.push(result.data.source_url);
+            personalInformation.upload_image.$remove(personalInformation.upload_image[0]);
+          };
+
+          var errorCallBack = function (result) {
+            console.log('失败!');
+            console.log(result);
+          };
+
+          function dataURLtoBlob(dataurl) {
+            var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+              bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+            while (n--) {
+              u8arr[n] = bstr.charCodeAt(n);
+            }
+            return new Blob([u8arr], {type: mime});
+          }
+
+          var length = personalInformation.upload_image.length;
+
+          for (i = 0; i < length; i++) {
+            var file = dataURLtoBlob(personalInformation.upload_image[0]);
+            var d = new Date();
+            var time = "/"+d.getFullYear()+"_"+(d.getMonth()+1)+"_"+d.getDate()+"_"+d.getHours()+"_"+d.getMinutes()+"_"+d.getSeconds()+"_"+d.getMilliseconds()+"_"+Math.round(Math.random()*10000000);
+            cos.uploadFile(successCallBack, errorCallBack, bucketName, time, file);
+          }
+
           $('.edit').addClass('hidden');
           $('.edit').siblings('span').removeClass('hidden');
           $('#edit_button').removeClass('hidden');
           $('#cancel_button').addClass('hidden');
+
         },
-        cancelEdit: function(){
+        cancelEdit: function () {
           $('.edit').addClass('hidden');
           $('.edit').siblings('span').removeClass('hidden');
           $('#edit_button').removeClass('hidden');
@@ -120,7 +162,6 @@
       slidesPerView: 1,
       spaceBetween: 5
     });
-
 
   </script>
 @endsection
