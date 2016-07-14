@@ -33,12 +33,10 @@
           <div class="swiper-slide">
             <img class="img-responsive" src="/image/test.jpg" alt="">
             <button class="btn btn-warning btn-block hidden edit">删除这张图片</button>
-            <!--<button class="btn btn-info" style="float: right;">图片设为首张</button>-->
           </div>
           <div v-for="image in upload_image" class="swiper-slide">
             <img class="img-responsive" :src="image" alt="">
             <button class="btn btn-warning btn-block hidden edit">删除这张图片</button>
-            <!--<button class="btn btn-info" style="float: right;">图片设为首张</button>-->
           </div>
         </div>
 
@@ -48,7 +46,7 @@
       </div>
 
       <h4 class="hidden edit">上传图片</h4>
-      <input id="123" class="form-control hidden edit" type="file" onchange="personalDetail.imgPreview(this)">
+      <input id="123" class="form-control hidden edit" type="file" onchange="personalInformation.imgPreview(this)">
       <hr>
 
       <div>
@@ -65,7 +63,7 @@
       <div>
         <h4>价格设置</h4>
 
-        <p>￥<span>20</span><input class="form-control input-sm hidden" type="text" style="width: 8em; display: inline;">/小时</p>
+        <p>￥<span>20</span><input class="form-control input-sm hidden edit" type="text" style="width: 8em; display: inline;">/小时</p>
 
       </div>
 
