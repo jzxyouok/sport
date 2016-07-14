@@ -9,7 +9,7 @@
     <div class="media"></div>
     <div class="media">
       <div class="media-left">
-        <img class="media-object" style="width: 60px;  height: 60px;" src="../image/test.jpg" alt="">
+        <img class="media-object" style="width: 60px;  height: 60px;" src="/image/test.jpg" alt="">
       </div>
       <div class="media-body">
         <h4 class="media-heading">教练1</h4>
@@ -30,13 +30,13 @@
 
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img class="img-responsive" src="../image/test.jpg" alt="">
+          <img class="img-responsive" src="/image/test.jpg" alt="">
         </div>
         <div class="swiper-slide">
-          <img class="img-responsive" src="../image/test.jpg" alt="">
+          <img class="img-responsive" src="/image/test.jpg" alt="">
         </div>
         <div class="swiper-slide">
-          <img class="img-responsive" src="../image/test.jpg" alt="">
+          <img class="img-responsive" src="/image/test.jpg" alt="">
         </div>
       </div>
       <br><br>
