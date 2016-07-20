@@ -14,24 +14,33 @@
           预约订单
         </div>
         <div class="panel-body">
-          <table class="table">
-            <tr>
-              <th class="col-xs-4">教练名称</th>
-              <td class="col-xs-8">教练1</td>
-            </tr>
-            <tr>
-              <th class="col-xs-4">简介</th>
-              <td class="col-xs-8">简介</td>
-            </tr>
-            <tr>
-              <th class="col-xs-4">价格</th>
-              <td class="col-xs-8">￥20/小时</td>
-            </tr>
-          </table>
-          <hr>
-          <br>
+          <div class="form-group">
+            <label class="control-label col-xs-4">预约项目</label>
 
+            <div class="col-xs-8">
+              <p required class="form-control-static">羽毛球</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-4">教练级别</label>
 
+            <div class="col-xs-8">
+              <p required class="form-control-static">特长生</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-4">教练性别</label>
+
+            <div class="col-xs-8">
+              <p required class="form-control-static">男</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="location" class="control-label col-xs-4">预约场地</label>
+            <div class="col-xs-8">
+              <p required class="form-control-static">XX羽毛球馆</p>
+            </div>
+          </div>
           <div class="form-group">
             <label class="control-label col-xs-4">预约日期</label>
 

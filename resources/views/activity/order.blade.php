@@ -23,10 +23,21 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-xs-4">活动描述</label>
+            <label class="control-label col-xs-4">活动类型</label>
 
             <div class="col-xs-8">
-              <textarea required class="form-control" rows="4" placeholder="请输入活动描述"></textarea>
+              <select required class="form-control">
+                <option value="">活动类型1</option>
+                <option value="">活动类型2</option>
+                <option value="">活动类型3</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-4">活动目的</label>
+
+            <div class="col-xs-8">
+              <textarea required class="form-control" rows="4" placeholder="请输入活动目的"></textarea>
             </div>
           </div>
           <div class="form-group">
@@ -55,6 +66,37 @@
             </div>
           </div>
           <div class="form-group">
+            <label class="control-label col-xs-4">教练人数</label>
+
+            <div class="col-xs-3">
+              <input required class="form-control" type="text" placeholder="">
+            </div>
+            <div class="" style="padding-top: 7px;">
+              人
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-4">是否需要陪练</label>
+            <div class="col-xs-8">
+              <div class="radio-inline">
+                <input name="need_partner" required type="radio" checked value=true>是
+              </div>
+              <div class="radio-inline">
+                <input name="need_partner" required type="radio" value=false>否
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-4">陪练人数</label>
+
+            <div class="col-xs-3">
+              <input required class="form-control" type="text" placeholder="">
+            </div>
+            <div class="" style="padding-top: 7px;">
+              人
+            </div>
+          </div>
+          <div class="form-group">
             <label class="control-label col-xs-4">是否需要裁判</label>
 
             <div class="col-xs-8">
@@ -64,6 +106,16 @@
               <div class="radio-inline">
                 <input name="need_referee" required type="radio" value=false>否
               </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-xs-4">裁判人数</label>
+
+            <div class="col-xs-3">
+              <input required class="form-control" type="text" placeholder="">
+            </div>
+            <div class="" style="padding-top: 7px;">
+              人
             </div>
           </div>
           <div class="form-group">

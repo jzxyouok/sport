@@ -20,7 +20,7 @@
             </a>
           </div>
           <div class="media-body">
-            <h4 class="media-heading">场馆1</h4>
+            <h4 class="media-heading">教练1</h4>
             约时间：2015-06-12 <br>
             预约时长：2小时
           </div>
