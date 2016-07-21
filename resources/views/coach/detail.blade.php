@@ -18,9 +18,7 @@
       <div class="media-right">
         <p class="media-object" style="white-space:nowrap;">￥20/小时</p>
 
-        <p>
-          <a class="btn btn-sm btn-primary media-object" href="">立即预约</a>
-        </p>
+
       </div>
     </div>
     <hr>

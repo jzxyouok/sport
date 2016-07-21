@@ -29,7 +29,7 @@
 <div class="container">
   <div class="row">
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="panel panel-info">
+      <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
              aria-controls="collapseOne">
@@ -72,7 +72,7 @@
 
       </div>
 
-      <div class="panel panel-success" v-cloak>
+      <div class="panel panel-default" v-cloak>
         <div class="panel-heading" role="tab" id="headingTwo">
           <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
              aria-expanded="false" aria-controls="collapseTwo">

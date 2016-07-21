@@ -51,6 +51,6 @@ Route::get('/stadium/list', function () {
     return view('stadium.list');
 });
 Route::get('/stadium/order', function () {
-    return view('stadium.list');
+    return view('stadium.order');
 });
 //test
