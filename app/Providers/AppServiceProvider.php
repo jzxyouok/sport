@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Core\Authorization\Role\Administrator;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->registerMorphMap();
     }
 
     /**
@@ -22,6 +24,14 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function register()
+    {
+        //
+    }
+
+    /**
+     * Register Morph Map for polymorphic relations.
+     */
+    protected function registerMorphMap()
     {
         //
     }

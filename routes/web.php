@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
-
 //test
 Route::get('/test', function () {
     return view('layouts.test');
