@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title','教练详情')
+@section('title','活动详情')
 
-@section('page_id','coach_detail')
+@section('page_id','stadium_detail')
 
 @section('content')
   <div class="container" v-cloak>
@@ -12,21 +12,21 @@
         <img class="media-object" style="width: 60px;  height: 60px;" src="/image/test.jpg" alt="">
       </div>
       <div class="media-body">
-        <h4 class="media-heading">教练1</h4>
+        <h4 class="media-heading">活动1</h4>
         简介1
       </div>
       <div class="media-right">
-        <p class="media-object" style="white-space:nowrap;">￥20/小时</p>
+        <p class="media-object" style="white-space:nowrap;">￥20</p>
 
         <p>
-          <a class="btn btn-sm btn-primary media-object" href="">立即预约</a>
+          <a class="btn btn-sm btn-primary media-object" href="">立即报名</a>
         </p>
       </div>
     </div>
     <hr>
 
     <div class="swiper-container">
-      <h4>教练图片</h4>
+      <h4>活动图片</h4>
 
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -47,7 +47,7 @@
     <hr>
 
     <div>
-      <h4>教练详情</h4>
+      <h4>活动详情</h4>
 
       <p>描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。描述。。</p>
     </div>
@@ -57,13 +57,13 @@
 
 @section('js')
   <script>
-    var coachDetail = new Vue({
-      el: '#coach_detail',
+    var stadiumDetail = new Vue({
+      el: '#stadium_detail',
       data: {},
       methods: {}
     });
 
-    var coachSwiper = new Swiper('.swiper-container', {
+    var stadiumSwiper = new Swiper('.swiper-container', {
       pagination: '.swiper-pagination',
       paginationClickable: true,
       slidesPerView: 1,

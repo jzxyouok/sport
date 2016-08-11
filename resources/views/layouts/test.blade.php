@@ -11,7 +11,10 @@
       <th>网页</th>
     </tr>
     <tr>
-      <td><a href="/activity">活动申请</a></td>
+      <td><a href="/activity/detail">活动详情</a></td>
+    </tr>
+    <tr>
+      <td><a href="/activity/list">活动列表</a></td>
     </tr>
     <tr>
       <td><a href="/coach/list">教练列表</a></td>
@@ -19,9 +22,9 @@
     <tr>
       <td><a href="/coach/detail">教练信息</a></td>
     </tr>
-    <tr>
-      <td><a href="/coach/order">教练预约</a></td>
-    </tr>
+    {{--<tr>--}}
+      {{--<td><a href="/coach/order">教练预约</a></td>--}}
+    {{--</tr>--}}
     <tr>
       <td><a href="/personal/information">个人信息</a></td>
     </tr>
@@ -37,9 +40,9 @@
     <tr>
       <td><a href="/stadium/detail">场馆信息</a></td>
     </tr>
-    <tr>
-      <td><a href="/stadium/order">场馆预约</a></td>
-    </tr>
+    {{--<tr>--}}
+      {{--<td><a href="/stadium/order">场馆预约</a></td>--}}
+    {{--</tr>--}}
   </table>
 </div>
 @endsection

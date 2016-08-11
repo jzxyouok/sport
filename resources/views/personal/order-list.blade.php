@@ -50,7 +50,7 @@
             预约时长：2小时
           </div>
           <div class="media-right">
-            <a href="#" class="text-warning">
+            <a href="#" style="color: #ddd;">
               <i style="margin: 20px 5px;font-size: 20px" class="glyphicon glyphicon-chevron-right"></i>
             </a>
           </div>

@@ -22,20 +22,6 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-xs-4">教练级别</label>
-
-            <div class="col-xs-8">
-              <p required class="form-control-static">特长生</p>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-xs-4">教练性别</label>
-
-            <div class="col-xs-8">
-              <p required class="form-control-static">男</p>
-            </div>
-          </div>
-          <div class="form-group">
             <label for="location" class="control-label col-xs-4">预约场地</label>
             <div class="col-xs-8">
               <p required class="form-control-static">XX羽毛球馆</p>
