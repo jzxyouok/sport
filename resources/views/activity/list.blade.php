@@ -35,6 +35,7 @@
             <h4 class="media-heading">@{{ activity.name }}</h4>
             <div>
               <span>@{{ activity.abstruct }}</span>
+              <span>/@{{ activity.date }}</span>
               <span>/￥@{{ activity.fee }}</span>
             </div>
 
@@ -67,10 +68,12 @@
           activities: [{
             name: '活动1',
             abstruct: '地点1',
+            date: '2016-06-06',
             fee: '100'
           }, {
             name: '活动2',
             abstruct: '地点2',
+            date: '2016-06-06',
             fee: '100'
           }]
         }, {
@@ -79,10 +82,12 @@
           activities: [{
             name: '活动3',
             abstruct: '50km',
+            date: '2016-06-06',
             fee: '100'
           }, {
             name: '活动4',
             abstruct: '50km',
+            date: '2016-06-06',
             fee: '100'
           }]
         },{
@@ -91,10 +96,12 @@
           activities: [{
             name: '活动5',
             abstruct: '10km',
+            date: '2016-06-06',
             fee: '100'
           }, {
             name: '活动6',
             abstruct: '10km',
+            date: '2016-06-06',
             fee: '100'
           }]
         }]

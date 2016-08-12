@@ -25,6 +25,14 @@
     </div>
     <hr>
 
+    <div>
+      <h4>活动安排</h4>
+      <p>路线：xx-xx-xx</p>
+      <p>时间：2016-06-06</p>
+      <p>里程：50km</p>
+      <p>预计消耗：2000cal</p>
+    </div>
+    <hr>
     <div class="swiper-container">
       <h4>活动图片</h4>
 
