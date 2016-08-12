@@ -5,19 +5,19 @@
 @section('page_id','stadium_list')
 
 @section('content')
-  <nav class="nav navbar-btn navbar-fixed-top">
-    <div class="container">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-      </div>
-    </div>
-  </nav>
-  <br><br><br>
+  {{--<nav class="nav navbar-btn navbar-fixed-top">--}}
+    {{--<div class="container">--}}
+      {{--<div class="input-group">--}}
+        {{--<input type="text" class="form-control" placeholder="Search for...">--}}
+      {{--<span class="input-group-btn">--}}
+        {{--<button class="btn btn-default" type="button">Go!</button>--}}
+      {{--</span>--}}
+      {{--</div>--}}
+    {{--</div>--}}
+  {{--</nav>--}}
+  {{--<br><br><br>--}}
   <div class="container" v-cloak>
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="nav nav-tabs" role="tablist" style="border-bottom: 1px solid #ddd;">
       <li role="presentation" v-for="data in stadiumData"><a href="#@{{ data.type }}" aria-controls="badminton" role="tab"
                                                              data-toggle="tab">@{{ data.type_ch }}</a></li>
     </ul>
