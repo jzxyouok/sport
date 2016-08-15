@@ -25,8 +25,9 @@
     </div>
     <hr>
 
+
     <div class="swiper-container">
-      <h4>教练图片</h4>
+      <h4>教练风采</h4>
 
       <div class="swiper-wrapper">
         <div class="swiper-slide">

@@ -12,11 +12,18 @@
         <img class="media-object" style="width: 60px;  height: 60px;" src="/image/test.jpg" alt="">
       </div>
       <div class="media-body">
-        <h4 class="media-heading">活动1</h4>
-        简介1
+        <div>
+          <h4 class="media-heading">活动1</h4>
+        </div>
+        <div>
+          已报名人数： 20/50
+        </div>
+        <div>
+          简介1
+        </div>
       </div>
       <div class="media-right">
-        <p class="media-object" style="white-space:nowrap;">￥20</p>
+        <p class="media-object" style="white-space:nowrap;">费用：￥100</p>
 
         <p>
           <a class="btn btn-sm btn-primary media-object" href="">立即报名</a>

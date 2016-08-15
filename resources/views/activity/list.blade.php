@@ -32,11 +32,16 @@
             </a>
           </div>
           <div class="media-body">
-            <h4 class="media-heading">@{{ activity.name }}</h4>
             <div>
+              <span class="media-heading h4">@{{ activity.name }}</span>
               <span>@{{ activity.abstruct }}</span>
-              <span>/@{{ activity.date }}</span>
-              <span>/￥@{{ activity.fee }}</span>
+            </div>
+            <div>
+              <span>活动日期：@{{ activity.date }}</span>
+            </div>
+            <div>
+              <span>人数：￥@{{ activity.people_amount }}/@{{ activity.people_max }}</span>
+              <span>&emsp;费用：￥@{{ activity.fee }}</span>
             </div>
 
           </div>
@@ -69,12 +74,16 @@
             name: '活动1',
             abstruct: '地点1',
             date: '2016-06-06',
-            fee: '100'
+            fee: '100',
+            people_amount: 20,
+            people_max: 50
           }, {
             name: '活动2',
             abstruct: '地点2',
             date: '2016-06-06',
-            fee: '100'
+            fee: '100',
+            people_amount: 20,
+            people_max: 50
           }]
         }, {
           type: 'riding',
@@ -83,12 +92,16 @@
             name: '活动3',
             abstruct: '50km',
             date: '2016-06-06',
-            fee: '100'
+            fee: '100',
+            people_amount: 20,
+            people_max: 50
           }, {
             name: '活动4',
             abstruct: '50km',
             date: '2016-06-06',
-            fee: '100'
+            fee: '100',
+            people_amount: 20,
+            people_max: 50
           }]
         },{
           type: 'run',
@@ -97,12 +110,16 @@
             name: '活动5',
             abstruct: '10km',
             date: '2016-06-06',
-            fee: '100'
+            fee: '100',
+            people_amount: 20,
+            people_max: 50
           }, {
             name: '活动6',
             abstruct: '10km',
             date: '2016-06-06',
-            fee: '100'
+            fee: '100',
+            people_amount: 20,
+            people_max: 50
           }]
         }]
       },
