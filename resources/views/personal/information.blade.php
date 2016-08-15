@@ -19,7 +19,7 @@
 @endsection
 
 @section('content')
-  <div class="container">
+  <div class="container" v-cloak>
     <div class="row">
       <div class="text-center">
         <br><br><br>

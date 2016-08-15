@@ -47,7 +47,7 @@
           </div>
           <div class="media-right">
             <p>
-              <a class="btn btn-sm btn-primary media-object" href="">查看详情</a>
+              <a class="btn btn-sm btn-primary media-object" href="/activity/detail">查看详情</a>
             </p>
 
             <p>

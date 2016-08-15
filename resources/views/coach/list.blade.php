@@ -37,11 +37,11 @@
           </div>
           <div class="media-right">
             <p>
-              <a class="btn btn-sm btn-primary media-object" href="">查看详情</a>
+              <a class="btn btn-sm btn-primary media-object" href="/coach/detail">查看详情</a>
             </p>
 
             <p>
-              <a class="btn btn-sm btn-primary media-object" href="">立即预约</a>
+              <a class="btn btn-sm btn-primary media-object" href="/coach/order">立即预约</a>
             </p>
           </div>
           <hr>

@@ -19,7 +19,7 @@
         <p class="media-object" style="white-space:nowrap;">￥20/小时</p>
 
         <p>
-          <a class="btn btn-sm btn-primary media-object" href="">立即预约</a>
+          <a class="btn btn-sm btn-primary media-object" href="/coach/order">立即预约</a>
         </p>
       </div>
     </div>
